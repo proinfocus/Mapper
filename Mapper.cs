@@ -31,8 +31,14 @@ namespace Basics
             // matching property of the destination object
             foreach (var sp in source.GetType().GetProperties())
             {
+                // Get value from source property
                 var sourceValue = sp.GetValue(source, null);
+
+                // Get destination property matching the source property
+                // having access modifier as Public and should be an instance
                 var dp = destination.GetType().GetProperty(sp.Name, BindingFlags.Public | BindingFlags.Instance);
+
+                // If destination property is not null and can be written, set value
                 if (null != dp && dp.CanWrite)
                     dp.SetValue(destination, sourceValue, null);
             }
@@ -65,8 +71,14 @@ namespace Basics
                 // matching property of the destination object
                 foreach (var sp in s.GetType().GetProperties())
                 {
+                    // Get value from source property
                     var sourceValue = sp.GetValue(s, null);
+
+                    // Get destination property matching the source property
+                    // having access modifier as Public and should be an instance
                     var dp = d.GetType().GetProperty(sp.Name, BindingFlags.Public | BindingFlags.Instance);
+                    
+                    // If destination property is not null and can be written, set value
                     if (null != dp && dp.CanWrite)
                         dp.SetValue(d, sourceValue, null);
                 }
