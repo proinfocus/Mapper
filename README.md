@@ -1,10 +1,11 @@
 # Mapper
 A C# helper class to map data either object to object or a list of objects to another list of objects.
 
-## Map
+## Methods
+### Map
 Maps single object to another object for matching properties.
 
-## MapList
+### MapList
 Maps a list of objects to another list of objects for matching properties.
 
 ### Examples
