@@ -12,6 +12,8 @@ Maps a list of objects to another list of objects for matching properties.
 
 The following example maps a Person object to Student object.
 <br/><b><code>Mapper.Map(person, student);</code></b>
+<br/>or <b><code>person.Map(student);</code></b>
 
 The following example maps a List of People to a List of Students.
 <br/><b><code>Mapper.MapList(people, students);</code></b>
+<br/>or <b><code>people.MapList(students);</code></b>
