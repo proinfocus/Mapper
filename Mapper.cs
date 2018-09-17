@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -17,7 +17,7 @@ namespace Basics
         /// <typeparam name="T2">Destination type</typeparam>
         /// <param name="source">Source object</param>
         /// <param name="destination">Destination object</param>
-        public static void Map<T1, T2>(T1 source, T2 destination)
+        public static void Map<T1, T2>(this T1 source, T2 destination)
         {
             // Throw exception if source is null
             if (source == null)
@@ -45,7 +45,7 @@ namespace Basics
         /// <typeparam name="D">Destination type</typeparam>
         /// <param name="source">List of source objects</param>
         /// <param name="destination">List of destination objects</param>
-        public static void MapList<S,D>(IList<S> source, IList<D> destination) where D : new()
+        public static void MapList<S,D>(this IList<S> source, IList<D> destination) where D : new()
         {
             // Throw exception if source is null
             if (source == null)
